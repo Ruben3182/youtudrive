@@ -32,7 +32,7 @@
             const video = videoData.map(function(link){
                     if (videotype == link.type){
                         return `
-                        <iframe  src="${link.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        <iframe class="yutu"  src="${link.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                     `
                     }
 
@@ -49,6 +49,20 @@
                 videoIteration();
             })
         }
+
+        const menuButton = document.querySelectorAll('.menuButton');
+        for(button of menuButton){
+            button.addEventListener('click', function(e){
+                for(button of menuButton){
+                    button.style = 'border: 2px solid orange; color: orange'
+                }
+                e.target.style = 'border: 2px solid red; color: red'
+            })
+        }
+
+     
+
+
 
     </script>
 </body>

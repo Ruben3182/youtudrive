@@ -10,7 +10,7 @@
     padding: 10px;
 }
 iframe{
-    width: 400px;
+    width: 380px;
     height: 285px;
     border-radius: 5px;
 }
@@ -58,4 +58,8 @@ h1{
     font-weight: 700;
     margin-top: 20px;
     text-align: center;
+}
+.ger{
+    border: 2px solid red;
+    color: red;
 }
