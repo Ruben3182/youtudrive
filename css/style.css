@@ -4,30 +4,61 @@
     font-family: Arial, Helvetica, sans-serif;
     font-style: normal;
     font-weight: 400;
+    box-sizing: border-box;
 }
+
+body{
+    background: #afaeae;
+}
+
 .main{
-    display: flex;
-    padding: 10px;
+    display: flex;   
 }
+
 iframe{
     width: 380px;
     height: 285px;
     border-radius: 5px;
 }
+
 .videoSection{
+    width: 100%;
     display: flex;
     flex-wrap: wrap;
-    gap: 5px;
+    gap: 10px;
     justify-content: center;
-    margin-left: 264px;
+    margin-left: 250px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
-.menuSecton{
-    min-width:  250px;
+
+.desktopMenu{
+    min-width: 250px;
+    /* height: 100%; */
     background: #272525;
     position: fixed;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
     border: 2px solid orange;
     border-radius: 5px;
+    z-index: 5000;
 }
+
+.mobileMenu{
+    width: 100%;
+    height: 70px;
+    background: #272525;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border: 2px solid orange;
+    border-radius: none;
+    z-index: 5000;
+    overflow: hidden;
+    display: none;
+}
+
 .menu{
     width: 200px;
     display: flex;
@@ -36,6 +67,7 @@ iframe{
     margin-top: 5px;
     margin-bottom: 25px;
 }
+
 .menuButton{
     width: 200px;
     height: 50px;
@@ -49,17 +81,108 @@ iframe{
     transition: 0.3s;
     font-size: 18px;
 }
+
 .menuButton:hover{
     border: 2px solid red;
     color: red;
 }
+
+.openMenu{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 32px;
+    color: orange;
+    display: none;
+    transition: 0.3s;
+}
+
+.openMenu:hover{
+    cursor: pointer;
+    color: red;
+}
+
 h1{
     color: red;
     font-weight: 700;
     margin-top: 20px;
     text-align: center;
 }
+
 .ger{
     border: 2px solid red;
     color: red;
+}
+
+@media(max-width: 1065px){
+    iframe{
+        width: 300px;
+        height: 200px;
+    }
+}
+
+@media(max-width: 905px){
+    iframe{
+        width: 250px;
+        height: 180px;
+    }
+    .menuSecton{
+        min-width: 200px;
+    }
+    .menu{
+        width: 160px;
+    }
+    .menuButton{
+        width: 160px;
+    }
+    .videoSection{
+        margin-left: 250px;
+    }
+}
+
+@media(max-width: 805px){
+    iframe{
+        width: 230px;
+        height: 160px;
+    }
+}
+
+@media(max-width: 740px){
+    main{
+        flex-direction: row;
+    }
+    iframe{
+        width: 250px;
+        height: 180px;
+    }
+    .mobileMenu{
+        display: block;
+    }
+    .desktopMenu{
+        display: none;
+    }
+    .menu{
+        width: 160px;
+    }
+    
+    .menuButton{
+        width: 160px;
+    }
+    .openMenu{
+        display: block;
+    }
+    .videoSection{
+        margin-top: 70px;
+        margin-left: 0px;
+    }
+    .title{
+        font-size: 28px;
+    }
+}
+
+@media(max-width: 530px){
+    iframe{
+        width: 85%;
+        height: 200px;
+    }
 }

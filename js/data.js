@@ -19,6 +19,10 @@ const videoData = [
     {"video":"https://www.youtube.com/embed/AyH_IGoma0s","type":"ger"},
     {"video":"https://www.youtube.com/embed/NeVj4Zyql7U","type":"ger"},
     {"video":"https://www.youtube.com/embed/mqJQ7wpkooQ","type":"ger"},
+    {"video":"https://www.youtube.com/embed/1c7mo469a20","type":"ger"},
+    {"video":"https://www.youtube.com/embed/nvI4pfGqgrA","type":"ger"},
+    {"video":"https://www.youtube.com/embed/BY9kE8QSIqE","type":"ger"},
+    {"video":"https://www.youtube.com/embed/AoI00KR7BT0","type":"ger"},
 
     {"video":"https://www.youtube.com/embed/_e5mIqafwMA","type":"en"},
     {"video":"https://www.youtube.com/embed/f2a_w-uRO0w","type":"en"},

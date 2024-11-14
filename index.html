@@ -11,59 +11,34 @@
 <body>
     <div class="main">
 
-        <div class="menuSecton">
-            <h1>YouTuDrive</h1>
-            <div class="menu">
-                <button class="menuButton ger">German</button>
-                <button class="menuButton en">English</button>
-                <button class="menuButton ru">Russian</button>
-                <button class="menuButton car">Cars</button>
+        <div class="menuSection">
+            <div class="desktopMenu">
+                <h1 class="title">YouTuDrive</h1>
+                <div class="menu">
+                    <button class="menuButton ger">German</button>
+                    <button class="menuButton en">English</button>
+                    <button class="menuButton ru">Russian</button>
+                    <button class="menuButton car">Cars</button>
+                </div>
             </div>
 
-        </div>
+            <div class="mobileMenu">
+                <span class="openMenu closed">&#9776;</span>
+                <h1 class="title">YouTuDrive</h1>
+                <div class="menu">
+                    <button class="menuButton ger">German</button>
+                    <button class="menuButton en">English</button>
+                    <button class="menuButton ru">Russian</button>
+                    <button class="menuButton car">Cars</button>
+                </div>
+            </div>
+        </div>  
+
         <div class="videoSection"></div>
 
     </div>
 
-    <script>
-        let videotype = "ger";
-        const buttonGer = document.querySelectorAll(".menuButton");
-        function videoIteration(){
-            const video = videoData.map(function(link){
-                    if (videotype == link.type){
-                        return `
-                        <iframe class="yutu"  src="${link.video}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                    `
-                    }
+<script src="js/script.js"></script>
 
-                })
-                document.querySelector(".videoSection").innerHTML = video.join("");
-        }
-        videoIteration();
-
-        for(but of buttonGer){
-            but.addEventListener("click",function(e){
-                console.log(e)
-                videotype = e.target.classList[1];
-                console.log(videotype);
-                videoIteration();
-            })
-        }
-
-        const menuButton = document.querySelectorAll('.menuButton');
-        for(button of menuButton){
-            button.addEventListener('click', function(e){
-                for(button of menuButton){
-                    button.style = 'border: 2px solid orange; color: orange'
-                }
-                e.target.style = 'border: 2px solid red; color: red'
-            })
-        }
-
-     
-
-
-
-    </script>
 </body>
 </html>
