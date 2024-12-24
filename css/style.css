@@ -87,6 +87,17 @@ iframe{
     color: red;
 }
 
+.words{
+    padding: 15px;
+    border-radius: 5px;
+    background: orange;
+    margin-top: 30px;
+    color: #272525;
+    text-decoration: none;
+    text-align: center;
+    font-size: 18px;
+  }
+
 .openMenu{
     position: absolute;
     top: 10px;
@@ -137,6 +148,9 @@ h1{
     }
     .videoSection{
         margin-left: 250px;
+    }
+    .words{
+        font-size: 16px;
     }
 }
 
